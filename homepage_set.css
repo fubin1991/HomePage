@@ -63,3 +63,8 @@ h2#News {
 	padding: 0px 15px 15px 0px;
 	text-align: center;
 }
+div#News {
+	margin: 0px 0px 0px 40px;
+/*	height: 100px; */
+/* 	overflow-y: auto; 滚动条 */
+}
