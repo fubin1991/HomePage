@@ -1,0 +1,65 @@
+body { 
+  
+  font-family:      "Times New Roman", Times, serif;
+  font-size:        medium;
+}
+
+/* 
+	height messes up the headers in the blog in the articles
+	it's only appropriate for the top header.
+	add a class (new with blog)
+	Affects the 3 #header rules for the main header below
+	In HTML: add class="top" to main header in index.html and blog.html
+*/
+
+h2 {
+	padding-top: 30px;
+}
+/* 段内强调 */
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+/* 页面主内容 */
+section#main {
+	line-height: 1.5em;
+    font-size:        100%;
+    padding: 10px 10px 0px 10px;
+    margin: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+/* 各级标题设置 */
+h1#name {
+	font-size: xx-large;
+	padding: 30px 10px 10px 10px;
+	margin-bottom: 0px;
+	letter-spacing: 0.5em; /* 字间距 */
+}
+#nameunderline {
+	font-size: 90%;
+	padding: 0px 10px 30px 10px;
+	line-height: 1.5em;
+}
+/* 个人照片 */
+#Personal_Photo {
+	font-size: 90%;
+	padding: 15px;
+	margin: 20px 0px 10px 0px;
+	width: 200;
+	float: right;
+	line-height: 1.5em;
+}
+/* 页面新闻 */
+section.News {
+    line-height: 1.5em;
+    font-size:        100%;
+    padding: 0px 15px 15px 15px;
+    margin: 0px 0px 30px 0px;
+    vertical-align: top;
+}
+h2#News {
+	border-top: solid;
+	border-top-color: silver;
+	padding: 0px 15px 15px 0px;
+	text-align: center;
+}
