@@ -1,0 +1,43 @@
+body { 
+  
+  font-family:      "Times New Roman", Times, serif;
+  font-size:        medium;
+}
+/* 页面设置 */
+#allcontent {
+	width: 750px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* 页面底边设置 */
+footer {
+	border-top: solid;
+	border-top-color: silver;
+  text-align:       center;
+  padding:          15px;
+  margin: 0px 10px 10px 10px;
+  font-size:        90%;
+  clear: right;
+}
+/* 页顶导航栏 */
+nav {
+	margin: 10px 10px 10px 10px;
+	padding-bottom: 10px;
+	border-bottom: solid;
+	border-bottom-color: silver;
+}
+nav ul {
+	text-align: right;
+	margin: 0px;
+	list-style-type: none;
+	padding: 5px 0px 5px 0px;
+}
+nav ul li {
+	display: inline;
+	padding: 5px 10px 5px 10px;
+}
+nav ul li.selected {
+	background-color: silver;
+}

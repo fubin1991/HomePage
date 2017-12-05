@@ -4,31 +4,67 @@
     <meta charset="utf-8">
     <title>Fu Bin's HomePage</title>
     <link rel="stylesheet" type="text/css" href="Page_site.css">
-	<link rel="stylesheet" type="text/css" href="research_set.css">
+	<link rel="stylesheet" type="text/css" href="Super_Resolution_set.css">
   </head> 
 
   <body>
    <div id="allcontent">
 	<nav>
 	<ul>
-		<li ><a href="../index.html">Homepage</a></li>
+		<li ><a href="../../index.html">Homepage</a></li>
 		<!-- <li><a href="../blog/blog.html">Blog</a></li> -->
-		<li class="selected"><a href="research.html">Research</a></li>
+		<li class="selected"><a href="../research.html">Research</a></li>
 		<li><a target="_blank" href="http://www.physics.hku.hk/~phys4150/">Course</a></li>
 	</ul>
 	</nav>
 	
-    <h1 id="research">Research</h1>
+    <h1 id="research">Super Resolution Reading List</h1>
 	
 	<section id="research">
 	<div>
-	<h2>Semantic Segmentation</h2>
+	<h2>Early Learning-based Methods</h2>
 	</div>
 	
 	<div>
-	<h2><a href="./Super_Resolution/Super_Resolution.html">Super Resolution</a></h2>
+	<h2>Locally Linear Regression</h2>
 	</div>
 	
+	<div>
+	<h2>Sparsity-based Methods</h2>
+	</div>
+	
+	<div>
+	<h2>Anchored Neighborhood Regression Method</h2>
+	 <p>
+		<ul>
+	    <li><em>ANR:</em> Anchored Neighborhood Regression for Fast Example-Based Super-Resolution</li>
+		<li><em>A+:</em> Adjusted Anchored Neighborhood Regression for Fast Super-Resolution </li>
+		<li><em>ANR 2.0:</em> Seven ways to improve example-based single image super resolution </li>
+		<li><em>ARN:</em> Anchored Regression Networks applied to Age Estimation and Super Resolution </li>
+		</ul>
+	 </p>
+	</div>
+	
+	<div>
+	<h2>Deep Learning Method</h2>
+	 <p>
+		<ul>
+	    <li><em>SRCNN:</em> Image Super-Resolution Using Deep Convolutional Networks. <br> 
+			This is the first paper which use CNN to handle SR problem.</li>
+		<li><em>VDSR:</em> Accurate Image Super-Resolution Using Very Deep Convolutional Networks. <br> 
+			This paper use residual learning and high learning rate to increase CNN layers up to 20 layers.</li>
+		<li><em>ESPCN:</em> Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network. <br> 
+			This paper remove bicubic interpolation operator by a smart-designed sub-pixel convolution layer. The feature map are extracted in the LR space.</li>
+		<li><em>LapSRN</em> </li>
+		<li><em>SRGAN:</em> Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network. <br> 
+			This is the first paper which use GAN to handle SR problem.</li>
+		<li><em>EnhanceNet:</em> Single Image Super-Resolution Through Automated Texture Synthesis.<br> 
+			This paper investigate different models (CNN & GAN) and different loss functions in SR problem.</li>
+		</ul>
+	 </p>
+	</div>
+	
+	<!--
 	<div>
 	<h2>Fast Multipole Method</h2>
 	 <p>
@@ -54,6 +90,7 @@
 		<a target="_blank" href="evaluation operator.pdf">Fast Calculate for Evolution Operators</a>
 	 </p>
 	</div>
+	-->
 
 	</section>
 	
