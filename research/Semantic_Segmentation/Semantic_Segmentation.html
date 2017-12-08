@@ -33,13 +33,24 @@
 			This paper compare three different upsampling methods (Shift-and-stitch, dilated Conv and deconv). 
 			It also discuess two different trianing methods (patchwise training and full convolutional training).
 			The following paper is helpful to understand Shift-and-stitch method. <br>
-			Fast image scanning with deep max-pooling convolutional neural networks. (2013)
+			Fast image scanning with deep max-pooling convolutional neural networks. (2013) <br>
+			For the decov, please refer these two papers: <br>
+			Adaptive deconvolutional networks for mid and high level feature learning. (2011) <br>
+			Visualizing and understanding convolutional networks. (2014)
 			<!-- <p align="center"> <img src="./img/SRCNN.jpg" width="480" height="200" > </p> -->
 			</li>
 		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs.<br>
 			This paper use conditional random field (CRF) to do inference. The paper also use dilated Conv (Atrous Convolution) to remove several pooling layers. 
-			The following paper (and its supplementary) is useful to understand this model. <br>
+			The following paper (and its supplementary) is useful to understand CRFs. <br>
 			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
+		<li><em>DeconvNet:</em> Learning Deconvolution Network for Semantic Segmentation. (2015) <br>
+			The proposed network is very similiar with U-Net. It has Convolution network (modified VGG-16) and Deconvolution network. It also use unpooling layers and
+			analyse the different functions with deconvolution layers. This paper use <em>two-stage training method</em> which train the network with easy examples first and 
+			fine-tune the trained network with hard examples.</li>	
+		<li><em>ENet:</em> A Deep Neural Network Architecture for Real-Time Semantic Segmentation. (2016) <br>
+			This paper creat a deep neural network named ENet specifically for tasks requiring low latency operation. It analyse several aspects to speed up the neural network and this analysis 
+			is useful for us to rethink the structure of neural network. For example, it shows that we don't need to design the same number of layers in decoder part comparing 
+			with encoder part.</li>
 			</li>
 		</ul>
 		</p>
