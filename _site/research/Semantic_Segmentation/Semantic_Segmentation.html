@@ -24,14 +24,38 @@
 	<div>
 	<h2>Deep Learning Method</h2>
 	 <p>
-		<p> Based on CNN <br>
+	 
+		<p> Based on Hypercolumns <br>
 		<ul>
-		<li><em>U-Net:</em> Convolutional Networks for Biomedical Image Segmentation. </li>
+		<li>Hypercolumns for Object Segmentation and Fine-grained Localization. (2014) <br>
+			This paper bring up Hypercolumns method and represente them as a neural network.</li>
+		<li><em>PixelNet:</em> Representation of the pixels, by the pixels, and for the pixels. (2016) <br>
+			This paper is based on above paper. There is another version of this paper: <br>
+			PixelNet: Towards a General Pixel-Level Architecture. <br>
+			There is another paper based on this work (use the same network to do different task): <br>
+			Marr Revisited: 2D-3D Alignment via Surface Normal Prediction. </li>
+		</ul>
+		</p>
+	 
+		<p> Based on Dilated Conv <br>
+		<ul>
 		<li><em>Dilated-Net:</em> Multi-scale contest aggregation by dilated convolutions. (2016) <br>
 			This paper use dilated Conv to connect coarse outputs to dense pixels.</li>
+		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs.<br>
+			This paper use conditional random field (CRF) to do inference. The paper also use dilated Conv (Atrous Convolution) to remove several pooling layers. 
+			The following paper (and its supplementary) is useful to understand CRFs. <br>
+			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
+			</li>
+		</ul>
+		</p>
+	 
+		<p> Based on Deconv <br>
+		<ul>
+		<li><em>U-Net:</em> Convolutional Networks for Biomedical Image Segmentation. </li>
 	    <li><em>FCN:</em> Fully Convolutional Networks for Semantic Segmentation. (2016) <br> 
 			This paper compare three different upsampling methods (Shift-and-stitch, dilated Conv and deconv). 
 			It also discuess two different trianing methods (patchwise training and full convolutional training).
+			The network is difficult to train, so it bring up the multi-stage training approach. 
 			The following paper is helpful to understand Shift-and-stitch method. <br>
 			Fast image scanning with deep max-pooling convolutional neural networks. (2013) <br>
 			For the decov, please refer these two papers: <br>
@@ -39,10 +63,6 @@
 			Visualizing and understanding convolutional networks. (2014)
 			<!-- <p align="center"> <img src="./img/SRCNN.jpg" width="480" height="200" > </p> -->
 			</li>
-		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs.<br>
-			This paper use conditional random field (CRF) to do inference. The paper also use dilated Conv (Atrous Convolution) to remove several pooling layers. 
-			The following paper (and its supplementary) is useful to understand CRFs. <br>
-			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
 		<li><em>DeconvNet:</em> Learning Deconvolution Network for Semantic Segmentation. (2015) <br>
 			The proposed network is very similiar with U-Net. It has Convolution network (modified VGG-16) and Deconvolution network. It also use unpooling layers and
 			analyse the different functions with deconvolution layers. This paper use <em>two-stage training method</em> which train the network with easy examples first and 
