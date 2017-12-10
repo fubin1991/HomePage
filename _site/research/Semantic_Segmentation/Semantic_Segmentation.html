@@ -46,6 +46,10 @@
 			The following paper (and its supplementary) is useful to understand CRFs. <br>
 			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
 			</li>
+			<li><em>PSPNet:</em> Pyramid Scene Parsing Network. (2017) <br>
+			This paper based on Dilated-Net and use Deconv at the same time. This paper also bring up a Pyramid Pooling Module.</li>
+			<li><em>ICNet:</em> ICNet for Real-Time Semantic Segmentation on High-Resolution Images. (2017) <br>
+			This paper based on PSPNet and use several ways to speed up this PSPNet.</li>
 		</ul>
 		</p>
 	 
@@ -67,11 +71,30 @@
 			The proposed network is very similiar with U-Net. It has Convolution network (modified VGG-16) and Deconvolution network. It also use unpooling layers and
 			analyse the different functions with deconvolution layers. This paper use <em>two-stage training method</em> which train the network with easy examples first and 
 			fine-tune the trained network with hard examples.</li>	
+		<li><em>SegNet:</em> A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. <br>
+			This SegNet has a similiar network structure with U-Net and DeconvNet. However, it uses a different upsample method. In encoder network, the locations of the maximum feature value in each pooling
+			window is memorized for each encoder feature map. In decoder network upsamples its input feature map(s) using the memorized max-pooling indices from the corresponding encoder feature map(s). 
+			These feature maps are then convolved with a trainable decoder filter bank to produce dense feature maps.</li>
 		<li><em>ENet:</em> A Deep Neural Network Architecture for Real-Time Semantic Segmentation. (2016) <br>
 			This paper creat a deep neural network named ENet specifically for tasks requiring low latency operation. It analyse several aspects to speed up the neural network and this analysis 
 			is useful for us to rethink the structure of neural network. For example, it shows that we don't need to design the same number of layers in decoder part comparing 
 			with encoder part.</li>
-			</li>
+		<li><em>ERFNet:</em> Efficient ConvNet for Real-time Semantic Segmentation. (2017) <br>
+			This paper bring up a real-time semantic segmentation network and they use similar ways to speed up calculation with ENet.</li>
+		<li><em>RefineNet:</em> Multi-Path Refinement Networks for High-Resolution Semantic Segmentation. (2016) <br>
+			This paper use multi-path to connect low-level and high-level features.</li>
+		<li><em>FRRN:</em> Full-Resolution Residual Networks for Semantic Segmentation in Street Scenes. (2016) <br>
+			This paper combines multi-scale context with pixel-level accuracy by using two processing streams within our network:
+			One stream carries information at the full image resolution, enabling precise adherence to segment boundaries.
+			The other stream undergoes a sequence of pooling operations to obtain robust features for recognition. 
+			The two streams are coupled at the full image resolution using residuals.</li>
+		<li><em>LinkNet:</em> Exploiting Encoder Representations for Efficient Semantic Segmentation. (2017) <br>
+			This paper design a small and fast network by linking each encoder with decoder.</li>
+		<li><em>GCN:</em> Large Kernel Matters: Improve Semantic Segmentation by Global Convolutional Network. (2017) <br>
+			This paper proposes a Global Convolutional Network and Boundary Refinement block to address both the classification and localization 
+			issues for the semantic segmentation.</li>
+		<li><em>Tiramisu:</em> The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation. (2017) <br>
+			This paper extends DenseNets to deal with the problem of semantic segmentation and achieves state of the art.</li>
 		</ul>
 		</p>
 	 </p>
