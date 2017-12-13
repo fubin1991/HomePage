@@ -19,15 +19,22 @@
 	</nav>
 	
     <h1 id="research">Semantic Segmentation Reading List</h1>
+	<p>
+	Semantic segmentation is the task that requires classifying each pixel into one of a given set of categories. <br>
+	We need a large field of view to do classification, therefore many people use 
+	pooling layer and striding to reduce the feature map in order to obtain global information. However, this will lost details about the picture and these details are very important due to the semantic 
+	segmentation. People try different ways to obtain global feature map and keep local details. <br>
+	Althought we try to keep the local details, the semantic segmentation output of DNN is very smooth. In order to recover accurate boundary, people try different ways. The first approach is to harness 
+	information from multiple layers in the convolutional network in order to better estimate the object boundaries. The second is to employ a super-pixel representation, essentially delegating 
+	the localization task to a lowlevel segmentation method. The third is based on coupling the recognition capacity of DCNNs and the fine-grained localization accuracy of fully connected CRFs.
+	</p>
 	
 	<section id="research">
 	<div>
-	<h2>Deep Learning Method</h2>
-	 <p>
-	 
-		<p> Based on Hypercolumns <br>
+	<p>
+		<h2>Based on Hypercolumns</h2>
 		<ul>
-		<li>Hypercolumns for Object Segmentation and Fine-grained Localization. (2014) <br>
+		<li>Hypercolumns for Object Segmentation and Fine-grained Localization. (2014) &#9787 <br>
 			This paper bring up Hypercolumns method and represente them as a neural network.</li>
 		<li><em>PixelNet:</em> Representation of the pixels, by the pixels, and for the pixels. (2016) <br>
 			This paper is based on above paper. There is another version of this paper: <br>
@@ -35,28 +42,37 @@
 			There is another paper based on this work (use the same network to do different task): <br>
 			Marr Revisited: 2D-3D Alignment via Surface Normal Prediction. </li>
 		</ul>
-		</p>
+	</p>
 	 
-		<p> Based on Dilated Conv <br>
+	<p>
+		<h2>Based on Dilated Conv</h2>
 		<ul>
-		<li><em>Dilated-Net:</em> Multi-scale contest aggregation by dilated convolutions. (2016) <br>
+		<li><em>Dilated-Net:</em> Multi-scale contest aggregation by dilated convolutions. (2016) &#9787 <br>
 			This paper use dilated Conv to connect coarse outputs to dense pixels.</li>
-		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs.<br>
-			This paper use conditional random field (CRF) to do inference. The paper also use dilated Conv (Atrous Convolution) to remove several pooling layers. 
+		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs. &#9787 <br>
+			This paper use conditional random field (CRF) to do inference. The paper also use dilated Conv (Atrous Convolution) to remove several pooling layers 
+			and use <em>Atrous Spatial Pyramid Pooling (ASPP) </em> as multiscale image representations. 
 			The following paper (and its supplementary) is useful to understand CRFs. <br>
 			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
 			</li>
-			<li><em>PSPNet:</em> Pyramid Scene Parsing Network. (2017) <br>
+		<li><em>PSPNet:</em> Pyramid Scene Parsing Network. (2017) &#9787 <br>
 			This paper based on Dilated-Net and use Deconv at the same time. This paper also bring up a Pyramid Pooling Module.</li>
-			<li><em>ICNet:</em> ICNet for Real-Time Semantic Segmentation on High-Resolution Images. (2017) <br>
+		<li><em>ICNet:</em> ICNet for Real-Time Semantic Segmentation on High-Resolution Images. (2017) <br>
 			This paper based on PSPNet and use several ways to speed up this PSPNet.</li>
+		<li><em>SegAware:</em> Segmentation-Aware Convolutional Networks Using Local Attention Masks. (2017) &#9787 <br>
+			This paper modify the DeepLab by proposing a segmentation-aware convolutional networks to address the issue of smoothness. 
+			In this work, it brings up the pairwise loss, segmentation mask, segmentation-aware smoothing, segmentation-aware CRFs and segmentation-aware convolution.</li>
+		<li><em>DUC:</em> Understanding Convolution for Semantic Segmentation. (2017) <br>
+			In decoding, this paper brings up a DUC element which is extremely easy to implement and can achieve pixel-level accuracy (similar ESPCN in SR). 
+			In encoding part, this paper change Dilated Conv to a HDC element by modifing the same rate of dilation to different rate. </li>
 		</ul>
-		</p>
+	</p>
 	 
-		<p> Based on Deconv <br>
+	<p> 
+		<h2>Based on Deconv</h2>
 		<ul>
 		<li><em>U-Net:</em> Convolutional Networks for Biomedical Image Segmentation. </li>
-	    <li><em>FCN:</em> Fully Convolutional Networks for Semantic Segmentation. (2016) <br> 
+	    <li><em>FCN:</em> Fully Convolutional Networks for Semantic Segmentation. (2016) &#9787 <br> 
 			This paper compare three different upsampling methods (Shift-and-stitch, dilated Conv and deconv). 
 			It also discuess two different trianing methods (patchwise training and full convolutional training).
 			The network is difficult to train, so it bring up the multi-stage training approach. 
@@ -71,6 +87,11 @@
 			The proposed network is very similiar with U-Net. It has Convolution network (modified VGG-16) and Deconvolution network. It also use unpooling layers and
 			analyse the different functions with deconvolution layers. This paper use <em>two-stage training method</em> which train the network with easy examples first and 
 			fine-tune the trained network with hard examples.</li>	
+		<li><em>DecoupledNet:</em> Decoupled Deep Neural Network for Semi-supervised Semantic Segmentation. (2015) &#9787 <br>
+			This paper use <em>semi-supervised</em> learning approach to train. This algorithm <em>decouples classification and segmentation</em> which
+			labels associated with an image are identified by classification network, and binary segmentation is subsequently performed for 
+			each identified label in segmentation network. It facilitates to reduce search space for segmentation effectively by exploiting 
+			class-specific activation maps obtained from <em>bridging layers</em>.</li>
 		<li><em>SegNet:</em> A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation. <br>
 			This SegNet has a similiar network structure with U-Net and DeconvNet. However, it uses a different upsample method. In encoder network, the locations of the maximum feature value in each pooling
 			window is memorized for each encoder feature map. In decoder network upsamples its input feature map(s) using the memorized max-pooling indices from the corresponding encoder feature map(s). 
@@ -96,8 +117,50 @@
 		<li><em>Tiramisu:</em> The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation. (2017) <br>
 			This paper extends DenseNets to deal with the problem of semantic segmentation and achieves state of the art.</li>
 		</ul>
-		</p>
-	 </p>
+	</p>
+	
+	<p>
+		<h2>Include RNN network</h2>
+		<ul>
+		<li><em>DAG-RNNs:</em> DAG-Recurrent Neural Networks For Scene Labeling. (2015) <br>
+			In this paper, recurrent neural networks (RNNs) are introduced to equip local features with a broader view of contextual awareness by modeling the contextual 
+			dependencies of local features. They adopt undirected cyclic graphs (UCG) to model the interactions among image units and decompose the UCG to several directed 
+			acyclic graphs (DAGs).</li>
+		</ul>
+	</p>
+	
+	<p>
+		<h2>Weakly-supervised learning approach</h2>
+		<ul>
+		<li>Constrained convolutional neural networks for weakly supervised segmentation </li>
+		<li>Fully convolutional multi-class multiple instance learning. </li>
+		<li>From image-level to pixellevel labeling with convolutional networks. </li>
+		</ul>
+	</p>
+	
+	<p>
+		<h2>Semi-supervised learning approach</h2>
+		<ul>
+		<li><em>DecoupledNet:</em> Decoupled Deep Neural Network for Semi-supervised Semantic Segmentation. (2015) &#9787 </li>
+		<li><em>DIC:</em> Deep Dual Learning for Semantic Image Segmentation. (2016) &#9787 </li>
+		<li>Weakly-and semi-supervised learning of a dcnn for semantic image segmentation </li>
+		<li>Scribblesup: Scribble-supervised convolutional networks for semantic segmentation. </li>
+		<li>Boxsup: Exploiting bounding boxes to supervise convolutional networks for semantic segmentation. </li>
+		</ul>
+	</p>
+	
+	
+	<p>
+		<h2>Use CRFs to Refine Prediction</h2>
+		<ul>
+		<li>Efficient inference in fully connected crfs with gaussian edge potentials. (2012) </li>
+		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs. &#9787 </li>
+		<li>Efficient Piecewise Training of Deep Structured Models for Semantic Segmentation. (2016) &#9787 <br>
+			This paper show how to improve semantic segmentation through the use of contextual information; specifically, they explore ‘patch-patch’ context between image regions,
+			and ‘patch-background’ context. It brings up three networks: FeatMap-Net, Unary-Net and Pairwise-Net. This paper is worthy to carefully read.</li>
+		<li><em>SegAware:</em> Segmentation-Aware Convolutional Networks Using Local Attention Masks. (2017) &#9787 </li>
+		</ul>
+	</p>
 	</div>
 	
 	</section>
