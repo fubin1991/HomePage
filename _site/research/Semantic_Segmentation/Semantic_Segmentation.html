@@ -41,6 +41,8 @@
 			PixelNet: Towards a General Pixel-Level Architecture. <br>
 			There is another paper based on this work (use the same network to do different task): <br>
 			Marr Revisited: 2D-3D Alignment via Surface Normal Prediction. </li>
+		<li><em>SuperPixels:</em> Feedforward semantic segmentation with zoom-out features. (2015) <br>
+			This paper extends Hypercolumns method into super-pixel by combining several neighbor pixels and building a hierarchical structure.</li>
 		</ul>
 	</p>
 	 
@@ -55,6 +57,9 @@
 			The following paper (and its supplementary) is useful to understand CRFs. <br>
 			Efficient inference in fully connected crfs with gaussian edge potentials. (2012)
 			</li>
+		<li><em>DeepLab v3:</em> Rethinking Atrous Convolution for Semantic Image Segmentation. (2017) </li>
+		<li>Learning Dense Convolutional Embeddings for Semantic Segmentation. (2016) <br>
+			This paper combine DeepLab with a embedding-based segmentation mask which try to sharpen the boundary.</li>
 		<li><em>PSPNet:</em> Pyramid Scene Parsing Network. (2017) &#9787 <br>
 			This paper based on Dilated-Net and use Deconv at the same time. This paper also bring up a Pyramid Pooling Module.</li>
 		<li><em>ICNet:</em> ICNet for Real-Time Semantic Segmentation on High-Resolution Images. (2017) <br>
@@ -96,6 +101,9 @@
 			This SegNet has a similiar network structure with U-Net and DeconvNet. However, it uses a different upsample method. In encoder network, the locations of the maximum feature value in each pooling
 			window is memorized for each encoder feature map. In decoder network upsamples its input feature map(s) using the memorized max-pooling indices from the corresponding encoder feature map(s). 
 			These feature maps are then convolved with a trainable decoder filter bank to produce dense feature maps.</li>
+		<li><em>LRN:</em> Label Refinement Network for Coarse-to-Fine Semantic Segmentation. (2017) <br>
+			This paper uses an encoder-decoder framework. The encoder network of LRN is similar to that of SegNet which is based on the VGG16 network and 
+			the decoder network in LRN introduces supervision and makes predictions in a coarse-to-fine fashion at several stages.</li>
 		<li><em>ENet:</em> A Deep Neural Network Architecture for Real-Time Semantic Segmentation. (2016) <br>
 			This paper creat a deep neural network named ENet specifically for tasks requiring low latency operation. It analyse several aspects to speed up the neural network and this analysis 
 			is useful for us to rethink the structure of neural network. For example, it shows that we don't need to design the same number of layers in decoder part comparing 
@@ -161,6 +169,23 @@
 		<li><em>SegAware:</em> Segmentation-Aware Convolutional Networks Using Local Attention Masks. (2017) &#9787 </li>
 		</ul>
 	</p>
+	
+	<p>
+		<h2>Other</h2>
+		<ul>
+		<li><em>BoxSup:</em> Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation. (2015) <br>
+			This paper investigate bounding box annotations as an alternative or extra source of supervision to train convolutional 
+			networks for semantic segmentation. The candidate segments are used to update the deep convolutional network. 
+			The semantic features learned by the network are then used to pick better candidates. This procedure is iterated.</li>
+		<li><em>LabelBank:</em> Revisiting Global Perspectives for Semantic Segmentation. (2017) <br>
+			This paper use holistic information to filter noisy low-level semantic segmentation. In detail, it is composed of three components. First, they have 
+			a holistic inference process that takes varied information sources to reason about the LabelBank representation of an image. 
+			Second, they have a detailed semantic segmentation process to conduct preliminary semantic segmentation on the image to generate a segmentation map. 
+			Finally, they have a holistic filtering process that leverages the inferred LabelBank to filter out false-positive pixel predictions in the 
+			preliminary semantic segmentation results.</li>
+		</ul>
+	</p>
+	
 	</div>
 	
 	</section>
