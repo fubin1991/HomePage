@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fu Bin's HomePage</title>
+    <title>Semantic Segmentation Reading List</title>
     <link rel="stylesheet" type="text/css" href="../../Page_site.css">
 	<link rel="stylesheet" type="text/css" href="Semantic_Segmentation_set.css">
   </head> 
@@ -152,7 +152,7 @@
 		<li><em>DecoupledNet:</em> Decoupled Deep Neural Network for Semi-supervised Semantic Segmentation. (2015) &#9787 </li>
 		<li><em>DIC:</em> Deep Dual Learning for Semantic Image Segmentation. (2016) &#9787 </li>
 		<li>Weakly-and semi-supervised learning of a dcnn for semantic image segmentation </li>
-		<li>Scribblesup: Scribble-supervised convolutional networks for semantic segmentation. </li>
+		<li><em>Scribblesup:</em> Scribble-supervised convolutional networks for semantic segmentation. (2016) </li>
 		<li>Boxsup: Exploiting bounding boxes to supervise convolutional networks for semantic segmentation. </li>
 		</ul>
 	</p>
@@ -171,18 +171,35 @@
 	</p>
 	
 	<p>
-		<h2>Other</h2>
+		<h2>Multi-Networks</h2>
 		<ul>
-		<li><em>BoxSup:</em> Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation. (2015) <br>
-			This paper investigate bounding box annotations as an alternative or extra source of supervision to train convolutional 
-			networks for semantic segmentation. The candidate segments are used to update the deep convolutional network. 
-			The semantic features learned by the network are then used to pick better candidates. This procedure is iterated.</li>
+		<li><em>OBG-FCN:</em> Object Boundary Guided Semantic Segmentation. (2016) <br>
+			This paper use boundary information to guide semantic segmentation. It consists three parts, an object boundary prediction FCN (OBP-FCN), 
+			which gives us an accurate prior knowledge of object localizations and shape details; a designed masking architecture (OBG-Mask), and a segment prediction net (FCN).</li>
+		<li>Recalling Holistic Information for Semantic Segmentation. (2016) </li>
 		<li><em>LabelBank:</em> Revisiting Global Perspectives for Semantic Segmentation. (2017) <br>
-			This paper use holistic information to filter noisy low-level semantic segmentation. In detail, it is composed of three components. First, they have 
-			a holistic inference process that takes varied information sources to reason about the LabelBank representation of an image. 
+			This paper is based on the above paper and uses holistic information to filter noisy low-level semantic segmentation by adding a holistic filter. 
+			In detail, it is composed of three components. First, they have a holistic inference process that takes varied information sources to reason about the LabelBank representation of an image. 
 			Second, they have a detailed semantic segmentation process to conduct preliminary semantic segmentation on the image to generate a segmentation map. 
 			Finally, they have a holistic filtering process that leverages the inferred LabelBank to filter out false-positive pixel predictions in the 
 			preliminary semantic segmentation results.</li>
+		</ul>
+	</p>
+	
+	<p>
+		<h2>Other</h2>
+		<ul>
+		<li><em>BoxSup:</em> Exploiting Bounding Boxes to Supervise Convolutional Networks for Semantic Segmentation. (2015) &#9787 <br>
+			This paper investigate bounding box annotations as an alternative or extra source of supervision to train convolutional 
+			networks for semantic segmentation. The candidate segments are used to update the deep convolutional network. 
+			The semantic features learned by the network are then used to pick better candidates. This procedure is iterated.</li>
+		<li><em>ParseNet:</em> Looking Wider to See Better. (2015) <br>
+			This paper shows that although theoretically, features from the top layers of a network have very large receptive fields, we argue that in practice, the empirical size of 
+			the receptive fields is much smaller, and is not enough to capture the global context. The paper use Global average pooling -> upsample and then combine with local feature 
+			can solve this problem. This paper also shows that L2 normalization is important for achieving good performance.</li>
+		<li><em>Not All Pixels Are Equal:</em> Difficulty-Aware Semantic Segmentation via Deep Layer Cascade. (2017) &#9787 <br>
+			This paper proposes a novel deep layer cascade (LC) method to improve the accuracy and speed of semantic segmentation. LC 
+			classifies most of the easy regions in the shallow stage and makes deeper stage focuses on a few hard regions.</li>
 		</ul>
 	</p>
 	
