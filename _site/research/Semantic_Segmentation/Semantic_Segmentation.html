@@ -101,9 +101,6 @@
 			This SegNet has a similiar network structure with U-Net and DeconvNet. However, it uses a different upsample method. In encoder network, the locations of the maximum feature value in each pooling
 			window is memorized for each encoder feature map. In decoder network upsamples its input feature map(s) using the memorized max-pooling indices from the corresponding encoder feature map(s). 
 			These feature maps are then convolved with a trainable decoder filter bank to produce dense feature maps.</li>
-		<li><em>LRN:</em> Label Refinement Network for Coarse-to-Fine Semantic Segmentation. (2017) <br>
-			This paper uses an encoder-decoder framework. The encoder network of LRN is similar to that of SegNet which is based on the VGG16 network and 
-			the decoder network in LRN introduces supervision and makes predictions in a coarse-to-fine fashion at several stages.</li>
 		<li><em>ENet:</em> A Deep Neural Network Architecture for Real-Time Semantic Segmentation. (2016) <br>
 			This paper creat a deep neural network named ENet specifically for tasks requiring low latency operation. It analyse several aspects to speed up the neural network and this analysis 
 			is useful for us to rethink the structure of neural network. For example, it shows that we don't need to design the same number of layers in decoder part comparing 
@@ -142,7 +139,10 @@
 		<ul>
 		<li>Constrained convolutional neural networks for weakly supervised segmentation </li>
 		<li>Fully convolutional multi-class multiple instance learning. </li>
-		<li>From image-level to pixellevel labeling with convolutional networks. </li>
+		<li>From image-level to pixel-level labeling with convolutional networks. </li>
+		<li>What's the Point: Semantic Segmentation with Point Supervision. (2016) <br>
+			The first contribution of this paper is a novel supervision regime for semantic segmentation based on humans pointing to objects. 
+			The second contribution is incorporating an generic objectness prior directly in the loss to guide the training of a CNN.</li>
 		</ul>
 	</p>
 	
@@ -159,13 +159,19 @@
 	
 	
 	<p>
-		<h2>Use CRFs to Refine Prediction</h2>
+		<h2>Use CRF/MRF to Refine Prediction</h2>
 		<ul>
 		<li>Efficient inference in fully connected crfs with gaussian edge potentials. (2012) </li>
 		<li><em>DeepLab:</em> Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs. &#9787 </li>
+		<li><em>BNF:</em> Semantic Segmentation with Boundary Neural Fields. (2016) <br>
+			This paper to do semantic segmentation with the help of boundary information and it use boundary neural fields to do inference. </li>
 		<li>Efficient Piecewise Training of Deep Structured Models for Semantic Segmentation. (2016) &#9787 <br>
 			This paper show how to improve semantic segmentation through the use of contextual information; specifically, they explore ‘patch-patch’ context between image regions,
 			and ‘patch-background’ context. It brings up three networks: FeatMap-Net, Unary-Net and Pairwise-Net. This paper is worthy to carefully read.</li>
+		<li><em>DPN:</em> Semantic Image Segmentation via Deep Parsing Network. (2015) &#9787 &#9787 <br>
+			This paper include MRF into a single CNN network and gives a detail explanation about this. This paper also shows many existing deep model with CRF/MRF is a special case of this work.
+			I strongly recommand you to read this paper. There is a extended version about this paper: <br>
+			Deep Learning Markov Random Field for Semantic Segmentation. (2017) </li>
 		<li><em>SegAware:</em> Segmentation-Aware Convolutional Networks Using Local Attention Masks. (2017) &#9787 </li>
 		</ul>
 	</p>
@@ -177,12 +183,23 @@
 			This paper use boundary information to guide semantic segmentation. It consists three parts, an object boundary prediction FCN (OBP-FCN), 
 			which gives us an accurate prior knowledge of object localizations and shape details; a designed masking architecture (OBG-Mask), and a segment prediction net (FCN).</li>
 		<li>Recalling Holistic Information for Semantic Segmentation. (2016) </li>
+		<li><em>LRN:</em> Label Refinement Network for Coarse-to-Fine Semantic Segmentation. (2017) <br>
+			This paper uses an encoder-decoder framework. The encoder network of LRN is similar to that of SegNet which is based on the VGG16 network and 
+			the decoder network in LRN introduces supervision and makes predictions in a coarse-to-fine fashion at several stages.</li>
 		<li><em>LabelBank:</em> Revisiting Global Perspectives for Semantic Segmentation. (2017) <br>
 			This paper is based on the above paper and uses holistic information to filter noisy low-level semantic segmentation by adding a holistic filter. 
 			In detail, it is composed of three components. First, they have a holistic inference process that takes varied information sources to reason about the LabelBank representation of an image. 
 			Second, they have a detailed semantic segmentation process to conduct preliminary semantic segmentation on the image to generate a segmentation map. 
 			Finally, they have a holistic filtering process that leverages the inferred LabelBank to filter out false-positive pixel predictions in the 
 			preliminary semantic segmentation results.</li>
+		<li>Semantic Image Segmentation with Task-Specific Edge Detection Using CNNs and a Discriminatively Trained Domain Transform. (2016) &#9787 <br>
+			This paper include three parts. The first component that produces coarse semantic segmentation score predictions is based on the DeepLab model.
+			The second component, which we refer to as EdgeNet. The EdgeNet predicts edges by exploiting features from intermediate layers of DeepLab.
+			The third component in our system is the <em>domain transform</em> (DT), which is is an edge-preserving filter that lends itself to very efficient implementation 
+			by separable 1-D recursive filtering across rows and columns. The DT component is used as filtering the raw CNN semantic segmentation scores to be better 
+			aligned with object boundaries, guided by the EdgeNet produced edge map.</li>
+		<li><em>BNF:</em> Semantic Segmentation with Boundary Neural Fields. (2016) <br>
+			This paper to do semantic segmentation with the help of boundary information and it use boundary neural fields to do inference.</li>
 		</ul>
 	</p>
 	
