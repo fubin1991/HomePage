@@ -23,27 +23,58 @@
 	<section id="research">
 	
 	<div>
-	<h2>Deep Learning Method</h2>
+	<h2>Region based method</h2>
 	 <p>
 		<ul>
-		<li><em>OverFeat:</em> Integrated Recognition, Localization and Detection using Convolutional Networks. (2014) <br> 
+		<li><em>OverFeat:</em> Integrated Recognition, Localization and Detection using Convolutional Networks. (2014) &#9787 <br> 
 			This paper develops several useful technology include <em>offset max-pooling</em> and <em> combinng prediction</em> 
 			(they claim this approach is better than NMS). This paper also talk about multi-scale training.</li>
-		<li><em>R-CNN:</em> Rich feature hierarchies for accurate object detection and semantic segmentation. (2014) <br> 
+		<li><em>R-CNN:</em> Rich feature hierarchies for accurate object detection and semantic segmentation. (2014) &#9787 <br> 
 			Region proposal (selective search) -> Feature extraction (AlexNet) -> SVM -> Bounding-box regression. <br>
 			This is a multi-stage network, we need seperately to train Feature extraction, SVM and Bounding-box regression. 
 			The speed of this method is 47s/image.</li>
-		<li><em>SPPnet:</em> Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition. (2015) <br>
+		<li><em>SPPnet:</em> Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition. (2015) &#9787 <br>
 			This paper use SPP to speed up classification and detection time. It also brings up a multi-size training method. 
 			The SPPnet method computes a convolutional feature map for the entire input image and then classifies each object proposal 
 			using a feature vector extracted from the shared feature map.For single scale input, the flow is: <br>
 			Region proposal (selective search) -> Feature extraction for full image (AlexNet) -> SPP for every window -> FC -> SVM -> Bounding-box regression <br>
 			This method can handle different size input images by using pooling (size and stride). However, this method is also a multi-stage network.</li>
-		<li><em>Fast R-CNN</em> (2015)</li>
-		<li><em>Faster R-CNN:</em> Towards Real-Time Object Detection with Region Proposal Networks. (2016)</li>
+		<li><em>Fast R-CNN</em> (2015) &#9787 </li>
+		<li><em>ION:</em> Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks (2015) <br>
+			This paper present an object detector based on Fast R-CNN that exploits information both inside and outside the region of interest. Contextual information outside 
+			the region of interest is integrated using spatial recurrent neural networks (IRNNs). Inside, we use skip pooling to extract information at multiple
+			scales and levels of abstraction.</li>
+		<li><em>Faster R-CNN:</em> Towards Real-Time Object Detection with Region Proposal Networks. (2016) &#9787 </li>
+		<li><em>PVANET:</em> Deep but Lightweight Neural Networks for Real-time Object Detection. (2016) <br>
+			This paper based on Faster R-CNN. It improves Faster R-CNN performance by using "less channels with more layers" with the help of C.ReLU and 
+			concatenation of multi-scale intermediate outputs.</li>
+		<li><em>R-FCN:</em> Object Detection via Region-based Fully Convolutional Networks. (2016) <br>
+			This paper construct a set of position-sensitive score maps by using a bank of specialized convolutional layers as the FCN output to improve Faster R-CNN. Each of these score maps 
+			encodes the position information with respect to a relative spatial position. Then append a position-sensitive RoI pooling layer for every region proposal that shepherds information from these score maps.</li>
 		</ul>
 	 </p>
 	 
+	 
+	<h2>Non-Region based method</h2>
+	 <p>
+		<ul>
+		<li><em>YOLO:</em> You Only Look Once: Unified, Real-Time Object Detection. (2015) <br> 
+			This paper frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. 
+			A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation.</li>
+		<li><em>YOLO9000:</em> Better, Faster, Stronger. (2016) &#9787 &#9787 <br> 
+			This paper use anchor (based on Faster R-CNN) to improve YOLO. This paper develops the anchor by designing a k-means clustering to aotomaticlly find good number and size.
+			In this work, it use k=5 while k=9 in Faster R-CNN. Finally this paper propose a hierarchical tree method to jointly train on object detection and classification.</li>
+		<li><em>SqueezeDet:</em> Unified, Small, Low Power Fully Convolutional Neural Networks for Real-Time Object Detection for Autonomous Driving. (2016) <br> 
+			This paper improve YOLO by three ways. First, this paper use stacked convolution filters to extract a high dimensional, low resolution feature map for the input image. 
+			Then, they use ConvDet, a convolutional layer to take the feature map as input and compute a large amount of object bounding boxes and predict their categories. 
+			Finally, this paper filter these bounding boxes to obtain final detections.</li>
+		<li><em>SSD:</em> Single Shot MultiBox Detector. (2015) &#9787 <br> 
+			This paper creat different sizes of feature map and discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales 
+			per feature map location. <br> 
+			There are several paper based on this work: <br>
+			<em>DSSD:</em> Deconvolutional Single Shot Detector. (2017) This paper combine Residual block and Deconvolution Module to improve SSD model.</li>
+		</ul>
+	 </p>
 	 
 	</div>
 	
