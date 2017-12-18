@@ -48,9 +48,15 @@
 		<li><em>PVANET:</em> Deep but Lightweight Neural Networks for Real-time Object Detection. (2016) <br>
 			This paper based on Faster R-CNN. It improves Faster R-CNN performance by using "less channels with more layers" with the help of C.ReLU and 
 			concatenation of multi-scale intermediate outputs.</li>
-		<li><em>R-FCN:</em> Object Detection via Region-based Fully Convolutional Networks. (2016) <br>
+		<li><em>R-FCN:</em> Object Detection via Region-based Fully Convolutional Networks. (2016) &#9787 <br>
 			This paper construct a set of position-sensitive score maps by using a bank of specialized convolutional layers as the FCN output to improve Faster R-CNN. Each of these score maps 
 			encodes the position information with respect to a relative spatial position. Then append a position-sensitive RoI pooling layer for every region proposal that shepherds information from these score maps.</li>
+		<li><em>HyperNet:</em>  Towards Accurate Region Proposal Generation and Joint Object Detection. (2016) <br>
+			This paper is primarily based on an elaborately designed Hyper Feature which aggregates hierarchical feature maps first and then compresses them into a uniform space.
+			Next, a slight region proposal generation network is constructed to produce about 100 proposals. Finally, these proposals are classified and adjusted based on the detection module.</li>
+		<li><em>FPN:</em>  Feature Pyramid Networks for Object Detection. (2017) &#9787 <br>
+			The construction of our pyramid involves a bottom-up pathway, a top-down pathway, and lateral connections. This method is a generic solution for building feature 
+			pyramids inside deep ConvNets.</li>
 		</ul>
 	 </p>
 	 
@@ -72,7 +78,13 @@
 			This paper creat different sizes of feature map and discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales 
 			per feature map location. <br> 
 			There are several paper based on this work: <br>
-			<em>DSSD:</em> Deconvolutional Single Shot Detector. (2017) This paper combine Residual block and Deconvolution Module to improve SSD model.</li>
+			<em>DSSD:</em> Deconvolutional Single Shot Detector. (2017) This paper combine Residual block and Deconvolution Module to improve SSD model. <br>
+			<em>BlitzNet:</em> A Real-Time Deep Network for Scene Understanding. (2017) This paper is almost the same with DSSD model.</li>
+			<em>DSOD:</em> Learning Deeply Supervised Object Detectors from Scratch. (2017) This paper use DenseNet to improve SSD model.</li>
+		<li><em>PLN:</em> Point Linking Network for Object Detection. (2017) &#9787 <br> 
+			This paper propose a novel object bounding box representation using points and links and implemented using deep ConvNets. There are two kinds of points in this system, 
+			the center point of an object bounding box which is denoted as O and a corner point of an object bounding box. In order to detect the point pair, there are two tasks, 
+			to localize the two points and to associate the two points. Based on these tasks, we propose a point-based object detection framework.</li>
 		</ul>
 	 </p>
 	 
