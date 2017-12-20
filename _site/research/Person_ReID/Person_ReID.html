@@ -1,0 +1,96 @@
+ .<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Person Re-Idenfication Reading List</title>
+    <link rel="stylesheet" type="text/css" href="../../Page_site.css">
+	<link rel="stylesheet" type="text/css" href="Person_ReID_set.css">
+  </head> 
+
+  <body>
+   <div id="allcontent">
+	<nav>
+	<ul>
+		<li ><a href="../../index.html">Homepage</a></li>
+		<!-- <li><a href="../blog/blog.html">Blog</a></li> -->
+		<li class="selected"><a href="../research.html">Research</a></li>
+		<li><a target="_blank" href="http://www.physics.hku.hk/~phys4150/">Course</a></li>
+	</ul>
+	</nav>
+	
+    <h1 id="research">Person Re-idenfication Reading List</h1>
+	
+	<section id="research">
+	<p>
+	The purpose of person re-identification is to match pedestrians observed in non-overlapping camera views with 
+	visual features. It has important applications in video surveillance, such as cross-camera tracking, multi-camera 
+	event detection, and pedestrian retrieval. This problem is extremely challenging because it is difficult to
+	match the visual features of pedestrians captured in different camera views due to the large variations of lightings, 
+	poses, viewpoints, image resolutions, photometric settings of cameras, and cluttered backgrounds. <br>
+	The typical pipeline of a person re-identification system is shown below: <br>
+		<p align="center"> <img src="./img/pipeline.jpg" width="480" height="150" >
+	</p>
+	<div>
+	<h2>Person Re-idenfication</h2>
+	 <p>
+		<ul>
+		<li><em>DeepReID:</em>  Deep Filter Pairing Neural Network for Person Re-Identification. (CVPR 2014) &#9787 <br> 
+			This paper propose a filter pairing neural network (FPNN) to jointly handle misalignment, photometric and geometric transforms, occlusions and background 
+			clutter. This paper also explain each layers into the traditional method.</li>
+			<p align="center"> <img src="./img/DeepReID.jpg" width="480" height="240" >
+		<li><em>DML:</em> Deep Metric Learning for Person Re-Identification. (2014) <br> 
+			This paper use a “siamese” deep part-based neural network to jointly learn the color feature, texture feature and metric in a unified framework.
+			The network has a symmetry structure with two sub-networks which are connected by Cosine function. To deal with the big variations of person images, binomial deviance 
+			is used to evaluate the cost between similarities and labels, which is proved to be robust to outliers. <br>
+			It has a modified version of this paper, which is: <br>
+			Deep Metric Learning for Practical Person Re-Identification. &#9787 </li>
+			<p align="center"> <img src="./img/MDL1.jpg" width="480" height="320" > <br>
+			<p align="center"> <img src="./img/MDL2.jpg" width="480" height="320" >
+		<li>An Improved Deep Learning Architecture for Person Re-Identification. (CVPR 2015) <br>
+			This paper propose a deep neural network architecture that formulates the problem of person re-identification as binary classification. It include: two layers 
+			of tied convolution with max pooling, cross-input neighborhood differences, patch summary features, across-patch features, higher-order relationships, 
+			and finally a softmax function to yield the final estimate of whether the input images are of the same person or not.</li>
+			<p align="center"> <img src="./img/An_Improved_Deep_Learning.jpg" width="480" height="240" >
+		<li><em>DGD:</em> Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification. (CVPR 2016) <br>
+			This paper propose a <em>Domain Guided Dropout</em> algorithm to improve the feature learning procedure. This paper first mix all the domains together and train 
+			a Convolutional Neural Network (CNN) to get a strong baseline. After the baseline model is trained jointly with datasets of all the domains, we replace 
+			the standard Dropout with the Domain Guided Dropout and resume the training for several epochs.</li>
+			<p align="center"> <img src="./img/DGD.jpg" width="480" height="240" >
+		<li> A Discriminatively Learned CNN Embedding for Person Re-identification. (2016) <br> 
+			This paper combine two models (verification and identification) to learn more discriminative pedestrian descriptors. The structure is similiar
+			with the DeepID (face verification) model.</li>
+		</ul>
+	 </p>
+	</div>
+	
+		<div>
+	<h2>Person Search</h2>
+	 <p>
+		<ul>
+		<li>Joint Detection and Identification Feature Learning for Person Search. (CVPR 2017) <br>
+			This paper propose a new deep learning framework for person search. Instead of breaking it down into two separate tasks—pedestrian detection and person 
+			re-identification, we jointly handle both aspects in a single convolutional neural network. An <em>Online Instance Matching (OIM)</em> loss function is proposed 
+			to train the network effectively, which is scalable to datasets with numerous identities.</li>
+			<p align="center"> <img src="./img/OIM.jpg" width="480" height="150" >
+		</ul>
+	 </p>
+	</div>
+
+	</section>
+	
+	
+	
+    <footer>
+	<p>
+	e-mail: fubin1991 at outlook.com 
+	</p>
+	<p>
+      &copy; 2017, Fu Bin
+	</p>
+    </footer>
+
+  </div>
+  </body>
+</html>
+
+
