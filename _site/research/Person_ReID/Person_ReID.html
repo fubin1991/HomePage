@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Person Re-Idenfication Reading List</title>
+    <title>Person Re-Re-identification Reading List</title>
     <link rel="stylesheet" type="text/css" href="../../Page_site.css">
 	<link rel="stylesheet" type="text/css" href="Person_ReID_set.css">
   </head> 
@@ -18,7 +18,7 @@
 	</ul>
 	</nav>
 	
-    <h1 id="research">Person Re-idenfication Reading List</h1>
+    <h1 id="research">Person Re-Re-identification Reading List</h1>
 	
 	<section id="research">
 	<p>
@@ -31,7 +31,7 @@
 		<p align="center"> <img src="./img/pipeline.jpg" width="480" height="150" >
 	</p>
 	<div>
-	<h2>Person Re-idenfication</h2>
+	<h2>Person Re-Re-identification</h2>
 	 <p>
 		<ul>
 		<li><em>DeepReID:</em>  Deep Filter Pairing Neural Network for Person Re-Identification. (CVPR 2014) &#9787 <br> 
@@ -67,7 +67,24 @@
 		<li> A Discriminatively Learned CNN Embedding for Person Re-identification. (2016) <br> 
 			This paper combine two models (verification and identification) to learn more discriminative pedestrian descriptors. The structure is similiar
 			with the DeepID (face verification) model.</li>
-		<li> Re-ranking Person Re-identification with k-reciprocal Encoding. (2017) <br> 
+		<li><em>DPFL:</em> Person Re-Identification by Deep Learning Multi-Scale Representations. (2017) <br> 
+			This paper jointly learn discriminative scale-specific features and maximise multi-scale feature fusion selections in image pyramid inputs.</li>
+		<li><em>AlignedReID:</em> Surpassing Human-Level Performance in Person Re-Identification. (2017) &#9787 &#9787 <br> 
+			In the learning stage, they have two branches for learning a global feature and local features jointly. In the local branch, they 
+			align local parts by introducing a <em>shortest path loss</em>. In the inference stage, they discard the local branch and only extract 
+			the global feature. They also adopt a <em>mutual learning approach</em> in the metric learning setting, to allow two models to learn better 
+			representations from each other. They find that the system with <em>re-ranking</em> has a higher level of accuracy than the human. </li>
+			<p align="center"> <img src="./img/AlignedReID1.jpg" width="700" height="300" > <br>
+			<p align="center"> <img src="./img/AlignedReID2.jpg" width="700" height="400" >
+		</ul>
+	 </p>
+	</div>
+	
+	<div>
+	<h2>Regard Re-ID problem as Rank problem</h2>
+	 <p>
+		<ul>
+		<li> Re-ranking Person Re-identification with k-reciprocal Encoding. (2017) &#9787 <br> 
 			This paper regard re-ID as a retrieval problem. Given a probe person, we want to search in the gallery for images containing 
 			the same person in a cross-camera mode. After an initial ranking list is obtained, a good practice consists of adding 
 			a re-ranking step, with the expectation that the relevant images will receive higher ranks. Therefore, this paper introduce a 
@@ -77,18 +94,39 @@
 			the re-ID performance. Finally, the final distance is calculated as the weighted aggregation of the original distance 
 			and the Jaccard distance. It is subsequently used to acquire the re-ranking list.</li>
 			<p align="center"> <img src="./img/Re-rank.jpg" width="550" height="450" >
-		<li><em>AlignedReID:</em> Surpassing Human-Level Performance in Person Re-Identification. (2017) <br> 
-			TIn the learning stage, we have two branches for learning a global feature and local features jointly. In the local branch, we 
-			align local parts by introducing a <em>shortest path loss</em>. In the inference stage, we discard the local branch and only extract 
-			the global feature. We also adopt a <em>mutual learning approach</em> in the metric learning setting, to allow two models to learn better 
-			representations from each other.</li>
-			<p align="center"> <img src="./img/AlignedReID1.jpg" width="700" height="300" > <br>
-			<p align="center"> <img src="./img/AlignedReID2.jpg" width="700" height="400" >
+		<li><em>DarkRank:</em> Accelerating Deep Metric Learning via Cross Sample Similarities Transfer. (2017) </li>
+			<p align="center"> <img src="./img/DarkRank.jpg" width="700" height="400" >
+		<li><em>GLAD:</em> Global-Local-Alignment Descriptor for Pedestrian Retrieval. (2017) <br>
+			This paper use pose to do alignment and regard Re-ID as rank problem. It consists of part extraction and descriptor learning modules, where several 
+			part regions are first detected and then deep neural networks are designed for representation learning on both the local and global regions. 
+			A hierarchical indexing and retrieval framework is designed to eliminate the huge redundancy in the gallery set, and accelerate the online Re-ID procedure.</li>
+			<p align="center"> <img src="./img/GLAD1.jpg" width="500" height="300" > <br>
+			<br>
+			<p align="center"> <img src="./img/GLAD2.jpg" width="500" height="300" >
 		</ul>
 	 </p>
 	</div>
 	
-		<div>
+	<div>
+	<h2>Include other model</h2>
+	 <p>
+		<ul>
+		<li><em>APRnet:</em> Improving Person Re-identification by Attribute and Identity Learning. (2017)  <br> 
+			This paper <em>combine Re-ID and Attribute recognition</em> into a single network. It proposes a very simple convolutional neural network (CNN) 
+			that learns a re-ID embedding and predicts the pedestrian attributes simultaneously. This multi-task method integrates an ID classification loss 
+			and a number of attribute classification losses, and back-propagates the weighted sum of the individual losses.</li>
+			<p align="center"> <img src="./img/APRnet.jpg" width="600" height="300" >
+		<li><em>PBFnet:</em> Pose Invariant Embedding for Deep Person Re-identification. (2017) <br>
+			This paper use pose to improve accurate. This paper introduces the pose invariant embedding (PIE) as a pedestrian descriptor. First, in order 
+			to align pedestrians to a standard pose, the PoseBox structure is introduced, which is generated through pose estimation followed by affine transformations. Second, to 
+			reduce the impact of pose estimation errors and information loss during PoseBox construction, this paper design a Pose Box fusion (PBF) CNN architecture that takes the original 
+			image, the PoseBox, and the pose estimation confidence as input.</li>
+			<p align="center"> <img src="./img/PBFnet.jpg" width="650" height="300" >
+		</ul>
+	 </p>
+	</div>
+	
+	<div>
 	<h2>Person Search</h2>
 	 <p>
 		<ul>
