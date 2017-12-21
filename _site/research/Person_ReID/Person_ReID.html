@@ -51,14 +51,39 @@
 			of tied convolution with max pooling, cross-input neighborhood differences, patch summary features, across-patch features, higher-order relationships, 
 			and finally a softmax function to yield the final estimate of whether the input images are of the same person or not.</li>
 			<p align="center"> <img src="./img/An_Improved_Deep_Learning.jpg" width="480" height="240" >
-		<li><em>DGD:</em> Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification. (CVPR 2016) <br>
+		<li><em>DGD:</em> Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification. (CVPR 2016) &#9787 <br>
 			This paper propose a <em>Domain Guided Dropout</em> algorithm to improve the feature learning procedure. This paper first mix all the domains together and train 
 			a Convolutional Neural Network (CNN) to get a strong baseline. After the baseline model is trained jointly with datasets of all the domains, we replace 
 			the standard Dropout with the Domain Guided Dropout and resume the training for several epochs.</li>
 			<p align="center"> <img src="./img/DGD.jpg" width="480" height="240" >
+		<li>Person Re-Identification by Multi-Channel Parts-Based CNN with Improved Triplet Loss Function. (CVPR 2017) <br>
+			This paper propose a novel <em> multi-channel parts-based </em> convolutional neural network (CNN) model under the triplet framework 
+			for person re-identification. Specifically, the proposed CNN model consists of multiple channels to jointly learn both the 
+			global full-body and local body-parts features of the input persons. The CNN model is trained by an improved triplet 
+			loss function that serves to pull the instances of the same person closer, and at the same time push the instances belonging to 
+			different persons farther from each other in the learned feature space.</li>
+			<p align="center"> <img src="./img/MCPB1.jpg" width="480" height="400" > <br>
+			<p align="center"> <img src="./img/MCPB2.jpg" width="480" height="600" >
 		<li> A Discriminatively Learned CNN Embedding for Person Re-identification. (2016) <br> 
 			This paper combine two models (verification and identification) to learn more discriminative pedestrian descriptors. The structure is similiar
 			with the DeepID (face verification) model.</li>
+		<li> Re-ranking Person Re-identification with k-reciprocal Encoding. (2017) <br> 
+			This paper regard re-ID as a retrieval problem. Given a probe person, we want to search in the gallery for images containing 
+			the same person in a cross-camera mode. After an initial ranking list is obtained, a good practice consists of adding 
+			a re-ranking step, with the expectation that the relevant images will receive higher ranks. Therefore, this paper introduce a 
+			k-reciprocal encoding method for re-ID re-ranking. It consists of three steps. First, we encode the weighted k-reciprocal neighbor set into a vector to form the 
+			k-reciprocal feature. Then, the Jaccard distance between two images can be computed by their k-reciprocal features. 
+			Second, to obtain a more robust k-reciprocal feature, we develop a local query expansion approach to further improve 
+			the re-ID performance. Finally, the final distance is calculated as the weighted aggregation of the original distance 
+			and the Jaccard distance. It is subsequently used to acquire the re-ranking list.</li>
+			<p align="center"> <img src="./img/Re-rank.jpg" width="550" height="450" >
+		<li><em>AlignedReID:</em> Surpassing Human-Level Performance in Person Re-Identification. (2017) <br> 
+			TIn the learning stage, we have two branches for learning a global feature and local features jointly. In the local branch, we 
+			align local parts by introducing a <em>shortest path loss</em>. In the inference stage, we discard the local branch and only extract 
+			the global feature. We also adopt a <em>mutual learning approach</em> in the metric learning setting, to allow two models to learn better 
+			representations from each other.</li>
+			<p align="center"> <img src="./img/AlignedReID1.jpg" width="700" height="300" > <br>
+			<p align="center"> <img src="./img/AlignedReID2.jpg" width="700" height="400" >
 		</ul>
 	 </p>
 	</div>
