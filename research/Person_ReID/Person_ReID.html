@@ -122,6 +122,14 @@
 			reduce the impact of pose estimation errors and information loss during PoseBox construction, this paper design a Pose Box fusion (PBF) CNN architecture that takes the original 
 			image, the PoseBox, and the pose estimation confidence as input.</li>
 			<p align="center"> <img src="./img/PBFnet.jpg" width="650" height="300" >
+		<li><em>SpindleNet:</em> Person Re-identification with Human Body Region Guided Feature Decomposition and Fusion. (2017 CVPR) <br>
+			This paper use pose to do alignment. This paper propose a novel Convolutional Neural Network (CNN), called Spindle Net, based on human body region 
+			guided multi-stage feature decomposition and tree-structured competitive feature fusion. The body regions are obtained from a body region proposal network (RPN). 
+			Our ReID features can then be extracted from the seven body regions through a multi-stage ROI pooling pipeline. The FEN takes the person image together with the 
+			region proposals as input and computes one global feature vector of the full image and seven sub-region feature vectors corresponding to the seven proposed body sub-regions. 
+			With the FFN, a final feature vector can be computed by merging the full image feature vector and the sub-region feature vectors together. The final feature vector can be used 
+			to distinguish different persons.</li>
+			<p align="center"> <img src="./img/SpindleNet.jpg" width="700" height="400" >
 		</ul>
 	 </p>
 	</div>
