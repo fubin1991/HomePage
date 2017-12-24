@@ -1,0 +1,81 @@
+ .<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Human Pose Estimation Reading List</title>
+    <link rel="stylesheet" type="text/css" href="../../Page_site.css">
+	<link rel="stylesheet" type="text/css" href="Human_Pose_Estimation_set.css">
+  </head> 
+
+  <body>
+   <div id="allcontent">
+	<nav>
+	<ul>
+		<li ><a href="../../index.html">Homepage</a></li>
+		<!-- <li><a href="../blog/blog.html">Blog</a></li> -->
+		<li class="selected"><a href="../research.html">Research</a></li>
+		<li><a target="_blank" href="http://www.physics.hku.hk/~phys4150/">Course</a></li>
+	</ul>
+	</nav>
+	
+    <h1 id="research">Human Pose Estimation Reading List</h1>
+	
+	<section id="research">
+	
+	<div>
+	<h2>Deep Learning Method</h2>
+	 <p>
+		<ul>
+		<li><em>DeepPose:</em> Human Pose Estimation via Deep Neural Networks. (2013) <br>
+			The pose estimation is formulated as a DNN-based regression problem towards body joints.</li>
+			<p align="center"> <img src="./img/DeepPose.jpg" width="700" height="150" >
+		<li><em>IEF:</em> Human Pose Estimation via Deep Neural Networks. (2013) <br>
+			This paper propose a framework that expands the expressive power of hierarchical feature extractors to encompass both input and output spaces, by 
+			introducing top-down feedback. Instead of directly predicting the outputs in one go, this paper use a self-correcting model 
+			that progressively changes an initial solution by feeding back error predictions, in a process called Iterative Error Feedback (IEF).</li>
+			<p align="center"> <img src="./img/IEF.jpg" width="400" height="200" >
+		<li><em>CPM:</em> Convolutional Pose Machines. (2016) <br>
+			The contribution of this paper is to implicitly model long-range dependencies between variables in structured prediction tasks such 
+			as articulated pose estimation. This is achieved by designing a sequential architecture composed of convolutional networks 
+			that directly operate on belief maps from previous stages, producing increasingly refined estimates for part locations, 
+			without the need for explicit graphical model-style inference.</li>
+			<p align="center"> <img src="./img/CPM.jpg" width="700" height="400" >
+		</ul>
+	 </p>
+	</div>
+	
+	</section>
+	
+	
+	<section id="research">
+	
+	<div>
+	<h2>Combine with Graph model</h2>
+	 <p>
+		<ul>
+		<li>Joint Training of a Convolutional Network and a Graphical Model for Human Pose Estimation. (2014) <br>
+			This paper proposes a new hybrid architecture that consists of a deep Convolutional Network and a Markov Random Field.</li>
+			<p align="center"> <img src="./img/Joint_training.jpg" width="600" height="250" >
+		<li>Human Pose Estimation using Deep Consensus Voting. (2016) <br>
+			This paper propose a novel approach where each location in the image votes for the position of each keypoint using a convolutional neural net.</li>
+		</ul>
+	 </p>
+	</div>
+	
+	</section>
+	
+	
+    <footer>
+	<p>
+	e-mail: fubin1991 at outlook.com 
+	</p>
+	<p>
+      &copy; 2017, Fu Bin
+	</p>
+    </footer>
+
+  </div>
+  </body>
+</html>
+
+
