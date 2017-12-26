@@ -23,7 +23,7 @@
 	<section id="research">
 	
 	<div>
-	<h2>Deep Learning Method</h2>
+	<h2>CNN Cascaded Architecture</h2>
 	 <p>
 		<ul>
 		<li><em>DeepPose:</em> Human Pose Estimation via Deep Neural Networks. (2013) <br>
@@ -40,6 +40,14 @@
 			that directly operate on belief maps from previous stages, producing increasingly refined estimates for part locations, 
 			without the need for explicit graphical model-style inference.</li>
 			<p align="center"> <img src="./img/CPM.jpg" width="700" height="400" >
+		<li>Recurrent Human Pose Estimation. (2016) <br>
+			This paper proposes a model regresses a heatmap representation for each body keypoint, and is able to learn and represent both the part appearances and the context of the part 
+			configuration. The model combining a feed-forward module with a recurrent module, where the recurrent module can be run iteratively to increase the effective 
+			receptive field of the network and thus improve the performance.</li>
+			<p align="center"> <img src="./img/RHPE.jpg" width="700" height="350" >
+		<li><em>CPHR:</em> Human pose estimation via Convolutional Part Heatmap Regression. (2016) &#9787 <br>
+			This paper propose a detection-followed-by-regression CNN cascade. The first part of our cascade outputs part detection heatmaps and the second part performs regression on these heatmaps.</li>
+			<p align="center"> <img src="./img/CPHR.jpg" width="700" height="300" >
 		</ul>
 	 </p>
 	</div>
@@ -48,20 +56,56 @@
 	
 	
 	<section id="research">
-	
 	<div>
 	<h2>Combine with Graph model</h2>
 	 <p>
 		<ul>
-		<li>Joint Training of a Convolutional Network and a Graphical Model for Human Pose Estimation. (2014) <br>
+		<li>Joint Training of a Convolutional Network and a Graphical Model for Human Pose Estimation. (2014) &#9787 <br>
 			This paper proposes a new hybrid architecture that consists of a deep Convolutional Network and a Markov Random Field.</li>
 			<p align="center"> <img src="./img/Joint_training.jpg" width="600" height="250" >
-		<li>Human Pose Estimation using Deep Consensus Voting. (2016) <br>
+		<li>Human Pose Estimation using Deep Consensus Voting. (2016) &#9787 <br>
 			This paper propose a novel approach where each location in the image votes for the position of each keypoint using a convolutional neural net.</li>
 		</ul>
 	 </p>
 	</div>
+	</section>
 	
+	<section id="research">
+	<div>
+	<h2>Normal CNN Architecture</h2>
+	 <p>
+		<ul>
+		<li>Associative Embedding: End-to-End Learning for Joint Detection and Grouping. (2016) &#9787 <br>
+			This paper introduce associative embedding, a novel method for supervising convolutional neural networks for the task of detection and grouping.
+			The network outputs both a heatmap of per-pixel detection scores and a heatmap of per-pixel identity tags. The detections and groups are then 
+			decoded from these two heatmaps.</li>
+			<p align="center"> <img src="./img/Associative_Embedding.jpg" width="600" height="250" >
+		</ul>
+	 </p>
+	</div>
+	</section>
+	
+	<section id="research">
+	<div>
+	<h2>Multi-Person Pose Estimation</h2>
+	 <p> Top-down Approach: first detect individual people and then estimate each person’s pose.
+		<ul>
+		<li><em>RMPE:</em> Regional Multi-Person Pose Estimation. (2016) <br>
+			This paper propose a novel regional multi-person pose estimation (RMPE) framework to facilitate pose estimation 
+			in the presence of inaccurate human bounding boxes. The framework consists of three components: Symmetric Spatial Transformer Network (SSTN), Parametric Pose 
+			Non-Maximum-Suppression (NMS), and Pose-Guided Proposals Generator (PGPG). The symmetric STN + parallel SPPE was introduced to enhance SPPE when given imperfect human 
+			proposals.</li>
+			<p align="center"> <img src="./img/RMPE.jpg" width="600" height="150" >
+		<li>Towards Accurate Multi-person Pose Estimation in the Wild. (2017) </li>
+		</ul>
+	 </p>
+	 <p> Bottom-up Approach: detect individual body joints and then group them into individuals.
+		<ul>
+		<li>Associative Embedding: End-to-End Learning for Joint Detection and Grouping. (2016) </li>
+		<li>Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields. (2016) </li>
+		</ul>
+	 </p>
+	</div>
 	</section>
 	
 	
