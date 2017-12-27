@@ -65,6 +65,13 @@
 			<p align="center"> <img src="./img/Joint_training.jpg" width="600" height="250" >
 		<li>Human Pose Estimation using Deep Consensus Voting. (2016) &#9787 <br>
 			This paper propose a novel approach where each location in the image votes for the position of each keypoint using a convolutional neural net.</li>
+		<li>Multi-Context Attention for Human Pose Estimation. (2017) &#9787 <br>
+			This paper propose to incorporate convolutional neural networks with a multi-context attention mechanism into an end-to-end framework for human pose estimation. 
+			This paper adopt <em>stacked hourglass networks</em> to generate attention maps from features at multiple resolutions with various semantics. The <em>Conditional Random Field (CRF)</em> is 
+			utilized to model the correlations among neighboring regions in the attention map. This paper further combine the <em>holistic attention model</em>, which focuses on the global consistency 
+			of the full human body, and the body part attention model, which focuses on the detailed description for different body parts. Additionally, this paper design novel <em>Hourglass 
+			Residual Units (HRUs)</em> to increase the receptive field of the network. </li>
+			<p align="center"> <img src="./img/MCA.jpg" width="700" height="250" >
 		</ul>
 	 </p>
 	</div>
@@ -80,6 +87,11 @@
 			The network outputs both a heatmap of per-pixel detection scores and a heatmap of per-pixel identity tags. The detections and groups are then 
 			decoded from these two heatmaps.</li>
 			<p align="center"> <img src="./img/Associative_Embedding.jpg" width="600" height="250" >
+		<li>Learning Feature Pyramids for Human Pose Estimation. (2017)  <br>
+			This paper design a Pyramid Residual Module (PRMs) to enhance the invariance in scales of DCNNs. Given input features, the PRMs learn convolutional 
+			filters on various scales of input features, which are obtained with different sub-sampling ratios in a multi-branch network. This paper also provide 
+			theoretic derivation to extend the current weight initialization scheme to multi-branch network structures.</li>
+			<p align="center"> <img src="./img/PRM.jpg" width="400" height="300" >
 		</ul>
 	 </p>
 	</div>
@@ -96,13 +108,23 @@
 			Non-Maximum-Suppression (NMS), and Pose-Guided Proposals Generator (PGPG). The symmetric STN + parallel SPPE was introduced to enhance SPPE when given imperfect human 
 			proposals.</li>
 			<p align="center"> <img src="./img/RMPE.jpg" width="600" height="150" >
-		<li>Towards Accurate Multi-person Pose Estimation in the Wild. (2017) </li>
+		<li>Towards Accurate Multi-person Pose Estimation in the Wild. (2017) <br>
+			This paper propose a simple, yet powerful, top-down approach consisting of two stages. In the first stage, we predict the location and scale of 
+			boxes which are likely to contain people; for this we use the Faster RCNN detector. In the second stage, we estimate the key-points of the person potentially contained in each 
+			proposed bounding box. For each key-point type we predict dense heatmaps and offsets using a fully convolutional ResNet. We also use a novel form of key-point-based 
+			Non-Maximum-Suppression (NMS), instead of the cruder box-level NMS, and a novel form of key-point-based confidence score estimation, instead of box-level scoring.</li>
+			<p align="center"> <img src="./img/TAMPE.jpg" width="400" height="300" >
+		<li><em>CPN:</em> Cascaded Pyramid Network for Multi-Person Pose Estimation. (2017) <br>
+			This paper includes two stages: GlobalNet and RefineNet. GlobalNet is a feature pyramid network which can successfully localize the “simple” keypoints 
+			like eyes and hands but may fail to precisely recognize the occluded or invisible keypoints. The RefineNet tries explicitly handling the “hard” keypoints by integrating 
+			all levels of feature representations from the GlobalNet together with an online hard keypoint mining loss.</li>
+			<p align="center"> <img src="./img/CPN.jpg" width="500" height="200" >
 		</ul>
 	 </p>
 	 <p> Bottom-up Approach: detect individual body joints and then group them into individuals.
 		<ul>
 		<li>Associative Embedding: End-to-End Learning for Joint Detection and Grouping. (2016) </li>
-		<li>Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields. (2016) </li>
+		<li>Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields. (2016) &#9787 </li>
 		</ul>
 	 </p>
 	</div>
