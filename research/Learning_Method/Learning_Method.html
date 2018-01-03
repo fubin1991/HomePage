@@ -23,6 +23,47 @@
 	<section id="research">
 	
 	<div>
+	<h2>Model Acceleration Method</h2>
+	 <p> Knowledge Transfer
+	 <ul>
+		<li>Model compression. (2006)</li>
+		<li>Distilling the Knowledge in a Neural Network. (2014)</li>
+		<li>FitNets: Hints for Thin Deep Nets. (2014) <br>
+			This paper aim to address the network compression problem by taking advantage of depth. It propose a novel approach to train thin and deep networks, called FitNets, 
+			to compress wide and shallower (but still deep) networks. The method is rooted in the recently proposed Knowledge Distillation (KD) and extends the idea to allow for thinner and deeper student 
+			models. It introduce intermediate-level hints from the teacher hidden layers to guide the training process of the student, i.e., want the student network (FitNet) to learn an intermediate representation 
+			that is predictive of the intermediate representations of the teacher network. Hints allow the training of thinner and deeper networks.</li>
+		<li>Accelerating convolutional neural networks with dominant convolutional kernel and knowledge pre-regression. (2016 ECCV)</li>
+		<li>Paying more attention to attention: Improving the performance of convolutional neural networks via attention transfer. (2017)</li>
+		<li>A gift from knowledge distillation: Fast optimization, network minimization and transfer learning. (2017)</li>
+		<li>Like What You Like: Knowledge Distill via Neuron Selectivity Transfer. (2017) <br>
+			This paper propose a novel knowledge transfer method by treating it as a distribution matching problem. Particularly, it match the distributions of neuron selectivity patterns 
+			between teacher and student networks. To achieve this goal, it devises a new KT loss function by minimizing the Maximum Mean Discrepancy (MMD) metric between these 
+			distributions combined with the original loss function. <br>
+			In the other word, this paper add a MMD loss term to the loss function of FitNets.</li>
+	 </ul>
+	 </p>
+	 <p> Network Pruning
+	 <ul>
+		<li>Learning both Weights and Connections for Efficient Neural Networks. (2015) <br>
+			This paper reduce the storage and computation required by neural networks by an order of magnitude without affecting their accuracy by learning only the important connections. Our 
+			method prunes redundant connections using a three-step method. First, we train the network to learn which connections are important. Next, we prune the unimportant 
+			connections. Finally, we retrain the network to fine tune the weights of the remaining connections.</li>
+		<li>Channel pruning for accelerating very deep neural networks. (2017)</li>
+		<li>Pruning filters for efficient ConvNets. (2017)</li>
+		<li>ThiNet: A filter level pruning method for deep neural network compression. (2017)</li>
+		<li>Pruning convolutional neural networks for resource efficient inference. (2017)</li>
+	 </ul>
+	 </p>
+	 <p> Network Quantization
+	 <ul>
+		<li>Binarized neural networks: Training deep neural networks with weights and activations constrained to +1 or -1. (2016)</li>
+		<li>XNOR-Net: ImageNet classification using binary convolutional neural networks. (2016)</li>
+	 </ul>
+	 </p>
+	</div>
+	
+	<div>
 	<h2>Supervised Learning</h2>
 	 <p>
 	 </p>
