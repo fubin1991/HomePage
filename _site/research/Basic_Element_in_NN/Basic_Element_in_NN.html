@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fu Bin's HomePage</title>
+    <title>Basic Element in Neural Network Reading List</title>
     <link rel="stylesheet" type="text/css" href="../../Page_site.css">
 	<link rel="stylesheet" type="text/css" href="Basic_Element_in_NN_set.css">
   </head> 
@@ -50,6 +50,14 @@
 			This paper brings up a new network structure. For each layer, the feature-maps of all preceding layers are
 			used as inputs, and its own feature-maps are used as inputs into all subsequent layers.</li>
 		<li><em>DRNs:</em> Dilated Residual Networks. (2017) </li>
+		<li><em>STN:</em> Spatial Transformer Networks. (2015) <br>
+			This paper proposes a new learnable module, the Spatial Transformer, which giving neural networks the ability to actively spatially transform feature maps, 
+			conditional on the feature map itself, without any extra training supervision or modification to the optimisation process. The spatial transformer mechanism 
+			is split into three parts. In order of computation, first a localisation network takes the input feature map, and through a number of hidden 
+			layers outputs the parameters of the spatial transformation that should be applied to the feature map – this gives a transformation conditional on the input. 
+			Then, the predicted transformation parameters are used to create a sampling grid, which is a set of points where the input map should be sampled to 
+			produce the transformed output. This is done by the grid generator. Finally, the feature map and the sampling grid are taken as inputs to the sampler, producing the output map 
+			sampled from the input at the grid points.</li>
 		</ul>
 	 </p>
 	

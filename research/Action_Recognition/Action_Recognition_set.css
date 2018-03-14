@@ -1,0 +1,23 @@
+body { 
+  
+  font-family:      "Times New Roman", Times, serif;
+  font-size:        medium;
+}
+h1#research {
+	padding: 50px 10px 0px 10px;
+	text-align: center;
+}
+section#research {
+	line-height: 1.5em;
+    font-size: 100%;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 50px 0px;
+}
+/* 段内强调 */
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+h2 {
+	padding-top: 30px;
+}
